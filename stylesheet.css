@@ -22,7 +22,8 @@
 /* Media query for medium-sized screens (max-width: 680px) */
 @media screen and (max-width: 680px) {
   .info-title,
-  .projects-title {
+  .projects-title,
+  .contact-title {
     font-size: 20px !important; /* Override the font size for info and projects titles on medium-sized screens */
   }
 }
@@ -44,6 +45,14 @@
 @media screen and (max-width: 1016px) {
   .project {
     margin-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-methods img,
+  .arrow img {
+    height: 50px !important;
+    width: 50px !important;
   }
 }
 
@@ -178,7 +187,7 @@ body {
 }
 
 /* Styling for the info section header (info-header) */
-.info-header {
+#info-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,4 +346,56 @@ body {
 
 .source-code {
   color: #ffc300;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contact-title {
+  position: absolute;
+  text-transform: uppercase; /* Convert the text to uppercase */
+  font-size: 3.5vw; /* Set the font size of the title as a percentage of the viewport width */
+  border-bottom: 1px solid white; /* Add a bottom border to the title */
+  margin-bottom: 80px;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: center; /* Center the contact methods horizontally */
+  margin-top: 20%;
+}
+
+.contact-methods img {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  padding: 5%;
+  margin: 0 10px;
+  transition: background 0.4s linear;
+}
+
+.contact-methods img:hover {
+  background: #217cad;
+  transition: background 0.4s linear;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.2s linear;
+}
+
+.arrow img:hover {
+  transform: translateY(-3%);
+  transition: transform 0.2s linear;
 }
