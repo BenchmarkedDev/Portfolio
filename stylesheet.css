@@ -10,12 +10,20 @@
   scroll-behavior: smooth; /* Links will scroll smoothly to the target content, instead of instantly jumping to it */
   scrollbar-color: rgb(29, 55, 102) rgb(165, 166, 170); /* Set scrollbar color to match the theme of the website */
   color: #fff;
+  transition: color 0.3s linear;
 }
 
 /* Media query for small screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
   .navbar {
     font-size: 13.59px; /* Decrease the font size of the navbar links on small screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #light-mode-toggle {
+    height: 28px !important;
+    font-size: 15px !important; /* Decrease the font size of the light/dark mode toggle on small screens */
   }
 }
 
@@ -65,6 +73,7 @@ hr {
 /* Styling for the body element */
 body {
   background: #001538; /* Set the background color for the entire page */
+  transition: background 0.3s linear;
 }
 
 /* Styling for the navigation bar (navbar) */
@@ -108,6 +117,23 @@ body {
 .navbar li a:hover {
   color: rgb(6, 158, 204); /* Change the link color on hover */
   transition: color 0.3s ease-in; /* Add a smooth transition for the link color change on hover */
+}
+
+#light-mode-toggle {
+  height: 35px;
+  width: 75px;
+  font-size: 20px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  background: #001538;
+  transition: background 0.3s linear;
+}
+
+#light-mode-toggle.clicked {
+  background: #217cad;
+  transition: background 0.3s linear;
 }
 
 /* Styling for the main wrapper (wrapper) */
@@ -184,6 +210,7 @@ body {
   min-height: 100vh; /* Minimum height of 100vh means that the content will be the same size across all screen sizes, and will resize accordingly */
   background: #001538; /* Set the background color of the info section */
   opacity: 1; /* Set the opacity of the info section */
+  transition: background 0.3s linear;
 }
 
 /* Styling for the info section header (info-header) */
@@ -203,6 +230,7 @@ body {
   margin-top: 20%; /* Add top margin for spacing */
   border-bottom: 1px solid white; /* Add a bottom border to the title */
   z-index: 1; /* Set the z-index of the title to make it appear above other elements */
+  transition: border-color 0.3s linear;
 }
 
 /* Styling for the info box container (info-box-container) */
@@ -291,6 +319,7 @@ body {
   margin-bottom: 10%; /* Add bottom margin for spacing between the titles */
   text-transform: uppercase; /* Convert the text to uppercase */
   border-bottom: 1px solid white; /* Add a bottom border to the titles */
+  transition: border-color 0.3s linear;
 }
 
 .hr-margin {
@@ -330,7 +359,6 @@ body {
 }
 
 .project {
-  /* border: 2px solid goldenrod; */
   min-height: 100vh;
   flex: 1 1 500px;
   margin-top: 5%;
@@ -338,14 +366,17 @@ body {
 
 .project-link {
   color: #ff6600;
+  transition: color 0.3s linear;
 }
 .project-link:hover,
 .source-code:hover {
   color: #217cad;
+  transition: color 0.3s linear;
 }
 
 .source-code {
   color: #ffc300;
+  transition: color 0.3s linear;
 }
 
 .contact-wrapper {
@@ -384,18 +415,68 @@ body {
   transition: background 0.4s linear;
 }
 
-.arrow {
+#arrow {
   display: flex;
   justify-content: center;
 }
 
-.arrow img {
+#arrow img {
   width: 100px;
   height: 100px;
   transition: transform 0.2s linear;
 }
 
-.arrow img:hover {
+#arrow img:hover {
   transform: translateY(-3%);
   transition: transform 0.2s linear;
+}
+
+/* The Following CSS is strictly for light-mode styling */
+
+/* Change all text to black, excluding the portfolio header */
+
+.light-mode
+  *
+  :not(
+    .portfolio-title,
+    .portfolio-subtitle,
+    .navbar li a,
+    .project-link,
+    .source-code
+  ) {
+  color: black;
+  transition: color 0.3s linear;
+  border-color: black;
+  transition: border-color 0.3s linear;
+}
+
+.light-mode {
+  background: #47a7db;
+  transition: background 0.3s linear;
+}
+
+.light-mode .info-wrapper {
+  background-color: #47a7db;
+  transition: background 0.3s linear;
+}
+
+.light-mode .info-box {
+  background-color: #217cad;
+  transition: background 0.3s linear;
+}
+
+.light-mode .project-link {
+  color: darkviolet;
+  transition: color 0.3s linear;
+}
+
+.light-mode .project-link:hover,
+.light-mode .source-code:hover {
+  color: darkblue;
+  transition: color 0.3s linear;
+}
+
+.light-mode .source-code {
+  color: darkgreen;
+  transition: color 0.3s linear;
 }

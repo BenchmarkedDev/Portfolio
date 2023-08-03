@@ -16,6 +16,7 @@
         <li><a href="#info-header">About</a></li>
         <li><a href="#project-header">Projects</a></li>
         <li><a href="#contact-header">Contact</a></li>
+        <button id="light-mode-toggle">🌞🌕</button>
       </ul>
     </div>
 
@@ -183,11 +184,33 @@
     </div>
     <br />
     <br />
-    <div class="arrow">
-      <a href="#"><img src="images/arrow.png" alt="nav-arrow" /></a>
+    <div id="arrow">
+      <a href="#"><img src="images/arrow.png" alt="Back to Top" /></a>
     </div>
     <br />
     <br />
     <br />
+
+    <script>
+      function toggleLightMode() {
+        const body = document.querySelector("body");
+        body.classList.toggle("light-mode"); // Toggle light-mode class on body
+
+        const lightModeToggle = document.getElementById("light-mode-toggle");
+        lightModeToggle.classList.toggle("clicked"); // Toggle the clicked class on the button (to change color)
+
+        const navArrow = document.querySelector("#arrow img");
+
+        if (navArrow.src.includes("arrow.png")) {
+          navArrow.src = "images/arrow-light.png";
+        } else {
+          navArrow.src = "images/arrow.png";
+        }
+      }
+
+      // Add event listener to the toggle button
+      const lightModeToggle = document.getElementById("light-mode-toggle");
+      lightModeToggle.addEventListener("click", toggleLightMode);
+    </script>
   </body>
 </html>
