@@ -16,7 +16,7 @@
 /* Media query for small screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
   .navbar li a {
-    font-size: 11.59px; /* Decrease the font size of the navbar links on small screens */
+    font-size: 12px; /* Decrease the font size of the navbar links on small screens */
     padding: 6px 10px !important;
   }
 }
@@ -32,10 +32,10 @@
   #light-mode-toggle {
     height: 20px !important;
     width: 45px !important;
-    font-size: 10px !important; /* Decrease the font size of the light/dark mode toggle on small screens */
-    margin-left: 5px !important;
+    font-size: 10.9px !important; /* Decrease the font size of the light/dark mode toggle on small screens */
+    margin-right: 10px !important;
     margin-top: 7px !important;
-    border-radius: 10px !important;
+    border-radius: 5px !important;
   }
 }
 
