@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
+    <div id="preloader"></div>
     <div class="navbar">
       <ul>
         <li><a href="#">Home</a></li>
@@ -192,6 +193,11 @@
     <br />
 
     <script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
       function toggleLightMode() {
         const body = document.querySelector("body");
         body.classList.toggle("light-mode"); // Toggle light-mode class on body

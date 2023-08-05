@@ -13,6 +13,12 @@
   transition: color 0.3s linear;
 }
 
+@media screen and (max-width: 800px) {
+  #preloader {
+    background-size: 70% !important;
+  }
+}
+
 /* Media query for small screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
   .navbar li a {
@@ -27,6 +33,13 @@
   .portfolio-title,
   .portfolio-subtitle {
     margin-top: 15px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project img {
+    width: 305px !important;
+    height: 350px !important;
   }
 }
 
@@ -63,15 +76,10 @@
     transition: transform 0.2s linear; /* Add a transition to the transform to make the animation smoother */
   }
 }
+
 /* When third project runs out of room, modify margin so that it isn't too far away from the other two projects */
 @media screen and (min-width: 1017px) and (max-width: 1516px) {
   .project-three * {
-    margin-top: 0 !important;
-  }
-}
-/* Banish top-margin to make the layout look better for smaller screen sizes */
-@media screen and (max-width: 1016px) {
-  .project {
     margin-top: 0 !important;
   }
 }
@@ -82,6 +90,15 @@
     height: 50px !important;
     width: 50px !important;
   }
+}
+
+#preloader {
+  background: #000 url(images/preloader.gif) no-repeat center center; /* black background, our preload gif, no repeats, and centered both horizontally and vertically */
+  background-size: 30%; /* Adjust the size to suit the gif & screen size */
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10; /* Set the z-index of the pre-loader animation higher than everything else, so it appears above all other elements */
 }
 
 /* Styling for the horizontal rule (hr) */
