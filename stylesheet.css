@@ -244,7 +244,7 @@ body {
   flex-direction: column; /* Vertically stack the elements */
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Minimum height of 100vh means that the content will be the same size across all screen sizes, and will resize accordingly */
+  min-height: 100%; /* Minimum height of 100% means that the content will be the same size across all screen sizes, and will resize accordingly */
   background: #001538; /* Set the background color of the info section */
   opacity: 1; /* Set the opacity of the info section */
   transition: background 0.3s linear;
@@ -396,7 +396,7 @@ body {
 }
 
 .project {
-  min-height: 100vh;
+  min-height: 100%;
   flex: 1 1 500px;
   margin-top: 5%;
 }
